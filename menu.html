@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow"><!-- demo copy: remove when it goes live on the venue's own domain -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thực đơn · Greek Souvlaki Nha Trang</title>
+<meta name="description" content="Greek Souvlaki Nha Trang — menu · Thực đơn · Меню. 115 Nguyễn Thiện Thuật, 09:30–23:00.">
+<meta name="theme-color" content="#071A3A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B3D91'/%3E%3Cpath d='M9 23V9h14v10h-6v-4h2' fill='none' stroke='%23fff' stroke-width='2.4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Manrope:wght@400;500;600;700&family=Unbounded:wght@700;800&display=swap">
+<style>
+:root{
+  --aegean:#0B3D91;--navy:#071A3A;--marble:#F4F1EA;--white:#fff;--gold:#E8B04A;--olive:#6E7B3B;--ink:#0E1726;
+  --muted:#5B6575;--line:rgba(14,23,38,.1);--sky:#9CC3FF;
+  --f-display:'Unbounded',system-ui,sans-serif;--f-accent:'Cormorant Garamond',Georgia,serif;--f-body:'Manrope',system-ui,sans-serif;
+  --pad:18px;--ease:cubic-bezier(.22,1,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:118px}
+body{margin:0;background:var(--marble);color:var(--ink);font:400 15px/1.5 var(--f-body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:0 var(--pad)}
+
+/* top: brand + language */
+.top{background:var(--navy);color:#fff;padding:calc(14px + env(safe-area-inset-top)) 0 0;position:relative;overflow:hidden}
+.top::before{content:"";position:absolute;inset:-40% -20% auto auto;width:420px;height:420px;border-radius:50%;background:radial-gradient(closest-side,rgba(19,80,181,.75),rgba(19,80,181,0));pointer-events:none}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{width:34px;height:34px;border-radius:9px;background:var(--aegean);display:grid;place-items:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.brand-main{display:block;font:800 13px/1 var(--f-display);letter-spacing:.04em}
+.brand-sub{display:block;margin-top:4px;font:600 9.5px/1 var(--f-body);letter-spacing:.32em;color:rgba(255,255,255,.72)}
+.lang{display:flex;padding:3px;border-radius:999px;border:1px solid rgba(255,255,255,.22)}
+.lang button{border:0;background:none;cursor:pointer;height:30px;min-width:34px;padding:0 8px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.75)}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--navy)}
+.intro{position:relative;padding:26px 0 24px}
+.eyebrow{display:flex;align-items:center;gap:10px;font:700 11px/1 var(--f-body);letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.eyebrow svg{width:28px;height:10px}
+h1{margin:12px 0 0;font:800 clamp(34px,10vw,54px)/1.04 var(--f-display);letter-spacing:-.03em}
+h1 em{display:block;font:italic 600 1.02em/1.05 var(--f-accent);color:var(--sky);letter-spacing:-.01em}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.facts li{display:flex;align-items:center;gap:6px;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:12.5px;font-weight:600;color:rgba(255,255,255,.9)}
+.facts svg{width:14px;height:14px;flex:none;color:var(--gold)}
+.meander{display:block;width:100%;height:14px;color:rgba(255,255,255,.22)}
+
+/* sticky category nav */
+.cats{position:sticky;top:0;z-index:20;background:rgba(244,241,234,.92);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line)}
+.cats ul{display:flex;gap:6px;margin:0;padding:10px var(--pad);list-style:none;overflow-x:auto;scrollbar-width:none;max-width:720px;margin:0 auto}
+.cats ul::-webkit-scrollbar{display:none}
+.cats a{display:block;white-space:nowrap;padding:9px 14px;border-radius:999px;text-decoration:none;font-size:13.5px;font-weight:700;color:var(--muted);transition:background-color .3s,color .3s}
+.cats a[aria-current="true"]{background:var(--aegean);color:#fff;box-shadow:0 8px 18px -10px rgba(11,61,145,.8)}
+
+section{padding:26px 0 6px}
+h2{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 12px;margin:0 0 14px;font:italic 600 34px/1 var(--f-accent);color:var(--aegean)}
+h2 small{font:700 11px/1 var(--f-body);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+/* favourites: swipe cards with the venue's own photos */
+.favs{display:grid;align-items:start;grid-auto-flow:column;grid-auto-columns:76%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(-1 * var(--pad));padding:2px var(--pad) 12px;scrollbar-width:none}
+.favs::-webkit-scrollbar{display:none}
+.fav{scroll-snap-align:start;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 18px 40px -26px rgba(7,26,58,.55);border:1px solid var(--line);display:flex;flex-direction:column}
+.fav-img{position:relative;aspect-ratio:3/2;background:#fff;display:grid;place-items:center;border:0;padding:0;cursor:zoom-in;width:100%}
+.fav-img img{width:100%;height:100%;object-fit:contain}
+.fav-img.cover img{object-fit:cover}
+.badge{position:absolute;top:10px;left:10px;display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;background:var(--gold);color:var(--navy);font:700 11px/1 var(--f-body);box-shadow:0 6px 14px -8px rgba(0,0,0,.5)}
+.badge.veg{position:static;background:var(--olive);color:#fff;box-shadow:none}
+.fav-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:3px;flex:1}
+.fav-name{margin:0;font:700 15px/1.25 var(--f-display);letter-spacing:-.01em}
+.alt{margin:0;font:700 9.5px/1.4 var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.fav-price{margin-top:6px;font:800 16px/1 var(--f-display);color:var(--aegean)}
+
+/* menu rows */
+.list{margin:0;padding:6px 16px;list-style:none;background:#fff;border-radius:22px;border:1px solid var(--line);box-shadow:0 18px 40px -30px rgba(7,26,58,.45)}
+.dish{padding:15px 0;border-bottom:1px solid var(--line)}
+.dish:last-child{border-bottom:0}
+.dish-top{display:flex;align-items:baseline;gap:8px}
+.dish-name{margin:0;font:italic 600 22px/1.15 var(--f-accent);color:var(--ink)}
+.dots{flex:1;min-width:16px;border-bottom:1.5px dotted rgba(11,61,145,.32);transform:translateY(-5px)}
+.price{white-space:nowrap;font:800 15px/1 var(--f-display);color:var(--aegean)}
+.dish-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin-top:5px}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0;padding:0;list-style:none}
+.chips li{padding:3px 9px;border-radius:999px;background:var(--marble);font-size:12px;color:#3A4456}
+.chips li.sig{background:rgba(232,176,74,.22);color:#6B4A0E;font-weight:600}
+.photo-btn{display:inline-flex;align-items:center;gap:5px;border:1px solid rgba(11,61,145,.25);background:#fff;border-radius:999px;padding:3px 9px;font-size:11.5px;font-weight:700;color:var(--aegean);cursor:pointer}
+.photo-btn svg{width:13px;height:13px}
+.grab{font-size:11.5px;color:var(--muted)}
+.subhead{margin:18px 4px 8px;font:700 11px/1 var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+/* footer */
+.foot{margin-top:28px;background:var(--navy);color:#fff;padding:26px 0 calc(28px + env(safe-area-inset-bottom))}
+.foot h3{margin:0 0 4px;font:italic 600 28px/1.1 var(--f-accent);color:var(--sky)}
+.foot p{margin:0;color:rgba(255,255,255,.8);font-size:14px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:18px 0}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px;border:1px solid rgba(255,255,255,.22);color:#fff}
+.btn svg{width:17px;height:17px}
+.btn.primary{grid-column:1/-1;background:#fff;color:var(--navy);border-color:#fff}
+.note{font-size:12px;color:rgba(255,255,255,.5)!important;margin-top:16px!important}
+
+/* photo viewer */
+.viewer{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:24px;background:rgba(7,26,58,.86);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:opacity .35s var(--ease)}
+.viewer.open{opacity:1;pointer-events:auto}
+.viewer figure{margin:0;max-width:560px;width:100%;background:#fff;border-radius:22px;overflow:hidden;transform:translateY(16px) scale(.97);transition:transform .45s var(--ease)}
+.viewer.open figure{transform:none}
+.viewer img{width:100%;max-height:62vh;object-fit:contain;background:#fff}
+.viewer figcaption{padding:14px 16px 16px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.viewer .close{position:absolute;top:calc(14px + env(safe-area-inset-top));right:14px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--navy);cursor:pointer;display:grid;place-items:center}
+:focus-visible{outline:2.5px solid var(--aegean);outline-offset:2px}
+.top :focus-visible,.foot :focus-visible{outline-color:#fff}
+@media (min-width:640px){.favs{grid-auto-columns:42%}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+:lang(vi) h1{line-height:1.18}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-meander" viewBox="0 0 28 10"><path d="M0 9h4V1h8v6H8V4" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M14 9h4V1h8v6h-4V4" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2v20M4 7l16 10M20 7 4 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z" fill="currentColor"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21.5 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.6 4.2 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.6 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="index.html" lang="en">
+        <span class="brand-mark"><svg width="18" height="18" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 25V7h18v12h-8v-5h3" fill="none" stroke="#fff" stroke-width="2.8"/></svg></span>
+        <span><span class="brand-main">GREEK SOUVLAKI</span><span class="brand-sub">NHA TRANG</span></span>
+      </a>
+      <div class="lang" role="group" data-t-attr="aria-label:lang">
+        <button type="button" data-lang="vi" lang="vi">VI</button>
+        <button type="button" data-lang="en" lang="en">EN</button>
+        <button type="button" data-lang="ru" lang="ru">RU</button>
+      </div>
+    </div>
+    <div class="intro">
+      <p class="eyebrow"><svg aria-hidden="true"><use href="#i-meander"/></svg><span data-t="eyebrow"></span></p>
+      <h1 data-t-html="title"></h1>
+      <ul class="facts">
+        <li><svg aria-hidden="true"><use href="#i-clock"/></svg><span data-t="f.hours"></span></li>
+        <li><svg aria-hidden="true"><use href="#i-cash"/></svg><span data-t="f.cash"></span></li>
+        <li><svg aria-hidden="true"><use href="#i-snow"/></svg><span data-t="f.ac"></span></li>
+      </ul>
+    </div>
+  </div>
+  <svg class="meander" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><pattern id="mq" width="28" height="14" patternUnits="userSpaceOnUse"><use href="#i-meander" width="28" height="10" y="2"/></pattern></defs><rect width="100%" height="14" fill="url(#mq)"/></svg>
+</header>
+
+<nav class="cats" data-t-attr="aria-label:cats"><ul id="cats"></ul></nav>
+
+<main class="wrap" id="menu"></main>
+
+<footer class="foot">
+  <div class="wrap">
+    <h3 data-t="foot.title"></h3>
+    <p>115 Nguyễn Thiện Thuật, Lộc Thọ, Nha Trang · <span data-t="f.hours"></span></p>
+    <div class="actions">
+      <a class="btn primary" href="https://maps.app.goo.gl/zZVb5sUCwCWjgra69" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-star"/></svg><span data-t="review"></span></a>
+      <a class="btn" href="tel:+84784508999"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-t="call"></span></a>
+      <a class="btn" href="https://wa.me/84784508999" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+      <a class="btn" href="https://zalo.me/84784508999" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-chat"/></svg>Zalo</a>
+      <a class="btn" href="https://food.grab.com/vn/en/restaurant/greek-souvlaki-nha-trang-delivery/5-C8EWRKDDR8AGCN" target="_blank" rel="noopener">Grab</a>
+    </div>
+    <p data-t="prices"></p>
+    <p class="note" data-t="concept"></p>
+  </div>
+</footer>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-name">
+  <button type="button" class="close" id="viewer-close" data-t-attr="aria-label:close"><svg width="20" height="20" aria-hidden="true"><use href="#i-close"/></svg></button>
+  <figure>
+    <img id="viewer-img" alt="">
+    <figcaption><strong class="fav-name" id="viewer-name"></strong><span class="price" id="viewer-price"></span></figcaption>
+  </figure>
+</div>
+
+<script src="assets/menu-data.js"></script>
+<script>
+(() => {
+  'use strict';
+  const { ING, SIG, MENU, EXTRAS, DRINKS } = window.GS_MENU;
+  const LANGS = ['vi', 'en', 'ru'];
+  const IDX = { ru: 0, en: 1, vi: 2 };
+  const T = {
+    vi: {
+      lang: 'Ngôn ngữ', cats: 'Danh mục', eyebrow: 'Thực đơn · Nha Trang',
+      title: 'Thực đơn <em>souvlaki Hy&nbsp;Lạp</em>',
+      'f.hours': 'Mỗi ngày 09:30–23:00', 'f.cash': 'Chỉ nhận tiền mặt', 'f.ac': 'Tầng 2 có máy lạnh',
+      favs: 'Món được yêu thích', favsNote: 'Ảnh của quán', wraps: 'Pita cuốn', boxes: 'Phần ăn', salads: 'Salad', starters: 'Khai vị',
+      extras: 'Gọi thêm', drinks: 'Đồ uống', hit: 'Khách yêu thích', veg: 'Món chay', photo: 'Ảnh', grab: 'Grab: {p}',
+      'foot.title': 'Cảm ơn bạn đã ghé quán!', review: 'Đánh giá chúng tôi trên Google', call: 'Gọi',
+      prices: 'Giá ăn tại quán theo thực đơn của nhà hàng. Trên Grab một số món đắt hơn 5.000 ₫.',
+      concept: 'Bản concept QR menu · @STUDIO', close: 'Đóng'
+    },
+    en: {
+      lang: 'Language', cats: 'Sections', eyebrow: 'Menu · Nha Trang',
+      title: 'The menu <em>of Greek souvlaki</em>',
+      'f.hours': 'Daily 09:30–23:00', 'f.cash': 'Cash only', 'f.ac': 'A/C on the 2nd floor',
+      favs: 'Favourites', favsNote: 'Photos by the restaurant', wraps: 'Wraps', boxes: 'Boxes', salads: 'Salads', starters: 'Starters',
+      extras: 'Extras', drinks: 'Drinks', hit: 'Guest favourite', veg: 'Vegetarian', photo: 'Photo', grab: 'On Grab: {p}',
+      'foot.title': 'Thanks for stopping by!', review: 'Review us on Google', call: 'Call',
+      prices: 'Dine-in prices from the venue’s own menu. On Grab some items cost 5,000 ₫ more.',
+      concept: 'QR menu concept · @STUDIO', close: 'Close'
+    },
+    ru: {
+      lang: 'Язык', cats: 'Разделы', eyebrow: 'Меню · Нячанг',
+      title: 'Меню <em>греческого сувлаки</em>',
+      'f.hours': 'Каждый день 09:30–23:00', 'f.cash': 'Только наличные', 'f.ac': 'Кондиционер на 2-м этаже',
+      favs: 'Хиты', favsNote: 'Фото заведения', wraps: 'Роллы', boxes: 'Боксы', salads: 'Салаты', starters: 'Закуски',
+      extras: 'Добавки', drinks: 'Напитки', hit: 'Хит гостей', veg: 'Вегетарианское', photo: 'Фото', grab: 'В Grab — {p}',
+      'foot.title': 'Спасибо, что зашли!', review: 'Оставить отзыв в Google', call: 'Позвонить',
+      prices: 'Цены зала — по меню заведения. В Grab часть позиций на 5 000 ₫ дороже.',
+      concept: 'Концепт QR-меню · @STUDIO', close: 'Закрыть'
+    }
+  };
+  const FAVS = ['chicken-wrap', 'mix-box', 'pork-wrap', 'greek-salad', 'tzatziki'];
+  const SECTIONS = ['wraps', 'boxes', 'salads', 'starters'];
+  const NBSP = ' ';
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+  let lang = 'vi';
+  const pick = l => LANGS.includes(l) ? l : null;
+  let saved = null;
+  try { saved = localStorage.getItem('gs-menu-lang'); } catch (e) { /* storage blocked */ }
+  const nav = (navigator.language || '').slice(0, 2);
+  lang = pick(new URLSearchParams(location.search).get('lang')) || pick(saved) || pick(nav) || 'en';
+
+  const t = k => T[lang][k] ?? T.en[k] ?? '';
+  const sep = () => lang === 'ru' ? NBSP : lang === 'vi' ? '.' : ',';
+  const price = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, sep()) + NBSP + '₫';
+  const nameOf = it => it.name[lang] || it.name.en;
+  const showEn = () => lang !== 'en';
+  const chips = it => `<ul class="chips">${it.ing.map(k => `<li${SIG.has(k) ? ' class="sig"' : ''}>${esc(ING[k][IDX[lang]] || ING[k][1])}</li>`).join('')}</ul>`;
+  const altLine = it => showEn() ? `<p class="alt" lang="en">${esc(it.en)}</p>` : '';
+
+  function favCard(it) {
+    return `<article class="fav">
+      <button type="button" class="fav-img${it.fit === 'cover' ? ' cover' : ''}" data-photo="${it.id}" aria-label="${esc(t('photo'))}: ${esc(nameOf(it))}">
+        <img src="${it.img}" alt="" width="${it.w}" height="${it.h}" loading="lazy" decoding="async">
+        ${it.badge === 'hit' ? `<span class="badge"><svg width="11" height="11" aria-hidden="true"><use href="#i-star"/></svg>${esc(t('hit'))}</span>` : ''}
+      </button>
+      <div class="fav-body"><h3 class="fav-name">${esc(nameOf(it))}</h3>${altLine(it)}<p class="fav-price">${price(it.price)}</p></div>
+    </article>`;
+  }
+  function dishRow(it) {
+    const meta = [
+      altLine(it),
+      it.badge === 'veg' ? `<span class="badge veg">${esc(t('veg'))}</span>` : '',
+      it.badge === 'hit' ? `<span class="badge" style="position:static">${esc(t('hit'))}</span>` : '',
+      it.img ? `<button type="button" class="photo-btn" data-photo="${it.id}"><svg aria-hidden="true"><use href="#i-camera"/></svg>${esc(t('photo'))}</button>` : '',
+      it.grab ? `<span class="grab">${esc(t('grab').replace('{p}', price(it.grab)))}</span>` : ''
+    ].filter(Boolean).join('');
+    return `<li class="dish">
+      <div class="dish-top"><h3 class="dish-name">${esc(nameOf(it))}</h3><span class="dots" aria-hidden="true"></span><span class="price">${price(it.price)}</span></div>
+      ${meta ? `<div class="dish-meta">${meta}</div>` : ''}
+      ${it.ing ? chips(it) : ''}
+    </li>`;
+  }
+  const simpleRows = list => list.map(it => `<li class="dish"><div class="dish-top"><h3 class="dish-name">${esc(nameOf(it))}</h3><span class="dots" aria-hidden="true"></span><span class="price">${price(it.price)}</span></div></li>`).join('');
+
+  function render() {
+    document.documentElement.lang = lang;
+    document.title = `${t('eyebrow').split(' · ')[0]} · Greek Souvlaki Nha Trang`;
+    document.querySelectorAll('[data-t]').forEach(el => { el.textContent = t(el.dataset.t); });
+    document.querySelectorAll('[data-t-html]').forEach(el => { el.innerHTML = t(el.dataset.tHtml); });
+    document.querySelectorAll('[data-t-attr]').forEach(el => { const [a, k] = el.dataset.tAttr.split(':'); el.setAttribute(a, t(k)); });
+    document.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+
+    const ids = ['favs', ...SECTIONS, 'extras'];
+    $('#cats').innerHTML = ids.map(id => `<li><a href="#s-${id}">${esc(t(id))}</a></li>`).join('');
+    let html = `<section id="s-favs"><h2>${esc(t('favs'))}<small>${esc(t('favsNote'))}</small></h2>
+      <div class="favs">${FAVS.map(id => favCard(MENU.find(m => m.id === id))).join('')}</div></section>`;
+    for (const cat of SECTIONS) {
+      const items = MENU.filter(m => m.cat === cat);
+      html += `<section id="s-${cat}"><h2>${esc(t(cat))}<small>${items.length}</small></h2><ul class="list">${items.map(dishRow).join('')}</ul></section>`;
+    }
+    html += `<section id="s-extras"><h2>${esc(t('extras'))}</h2><ul class="list">${simpleRows(EXTRAS)}</ul>
+      <p class="subhead">${esc(t('drinks'))}</p><ul class="list">${simpleRows(DRINKS)}</ul></section>`;
+    $('#menu').innerHTML = html;
+    spy();
+  }
+
+  /* highlight the section in view in the sticky nav */
+  let io;
+  function spy() {
+    if (io) io.disconnect();
+    const links = [...document.querySelectorAll('#cats a')];
+    const mark = id => links.forEach(a => {
+      const on = a.getAttribute('href') === '#' + id;
+      a.setAttribute('aria-current', String(on));
+      if (on) a.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+    });
+    mark('s-favs');
+    io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) mark(e.target.id); }), { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main section').forEach(s => io.observe(s));
+  }
+
+  /* photo viewer */
+  const viewer = $('#viewer');
+  let lastFocus = null;
+  function openPhoto(id) {
+    const it = MENU.find(m => m.id === id);
+    if (!it || !it.img) return;
+    lastFocus = document.activeElement;
+    $('#viewer-img').src = it.img;
+    $('#viewer-img').alt = nameOf(it);
+    $('#viewer-name').textContent = nameOf(it);
+    $('#viewer-price').textContent = price(it.price);
+    viewer.classList.add('open');
+    $('#viewer-close').focus();
+  }
+  function closePhoto() { viewer.classList.remove('open'); if (lastFocus) lastFocus.focus(); }
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-photo]');
+    if (b) openPhoto(b.dataset.photo);
+    else if (e.target === viewer || e.target.closest('#viewer-close')) closePhoto();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && viewer.classList.contains('open')) closePhoto(); });
+
+  document.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => {
+    lang = b.dataset.lang;
+    try { localStorage.setItem('gs-menu-lang', lang); } catch (e) { /* storage blocked */ }
+    render();
+  }));
+  render();
+})();
+</script>
+</body>
+</html>
