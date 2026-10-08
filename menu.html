@@ -19,7 +19,7 @@
   --pad:18px;--ease:cubic-bezier(.22,1,.36,1);
 }
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-padding-top:118px}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:68px}
 body{margin:0;background:var(--marble);color:var(--ink);font:400 15px/1.5 var(--f-body);-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 button{font:inherit;color:inherit}
@@ -288,20 +288,39 @@ h2 small{font:700 11px/1 var(--f-body);letter-spacing:.18em;text-transform:upper
     spy();
   }
 
-  /* highlight the section in view in the sticky nav */
-  let io;
-  function spy() {
-    if (io) io.disconnect();
-    const links = [...document.querySelectorAll('#cats a')];
-    const mark = id => links.forEach(a => {
+  /* highlight the section in view in the sticky nav.
+     Only the nav strip itself is scrolled sideways (scrollTo on the strip). Never use
+     scrollIntoView here: on phones it also scrolls the page, which fights the reader's
+     own scrolling and throws them back to the previous section. */
+  let current = '', spyRaf = 0;
+  function markActive(id) {
+    if (id === current) return;
+    current = id;
+    const strip = $('#cats');
+    strip.querySelectorAll('a').forEach(a => {
       const on = a.getAttribute('href') === '#' + id;
       a.setAttribute('aria-current', String(on));
-      if (on) a.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+      if (on) {
+        const left = a.offsetLeft - (strip.clientWidth - a.offsetWidth) / 2;
+        strip.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+      }
     });
-    mark('s-favs');
-    io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) mark(e.target.id); }), { rootMargin: '-45% 0px -50% 0px' });
-    document.querySelectorAll('main section').forEach(s => io.observe(s));
   }
+  function spyNow() {
+    spyRaf = 0;
+    const line = $('.cats').getBoundingClientRect().bottom + 24;
+    let id = 's-favs';
+    document.querySelectorAll('main section').forEach(sec => { if (sec.getBoundingClientRect().top <= line) id = sec.id; });
+    // at the very bottom the last (short) section can never reach the line
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+      const all = document.querySelectorAll('main section');
+      id = all[all.length - 1].id;
+    }
+    markActive(id);
+  }
+  function spy() { current = ''; spyNow(); }
+  window.addEventListener('scroll', () => { if (!spyRaf) spyRaf = requestAnimationFrame(spyNow); }, { passive: true });
+  window.addEventListener('resize', () => { if (!spyRaf) spyRaf = requestAnimationFrame(spyNow); }, { passive: true });
 
   /* photo viewer */
   const viewer = $('#viewer');
